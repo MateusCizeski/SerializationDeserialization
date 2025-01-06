@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "9kcd3bsA9Sw=",
+  "dgSpecHash": "9FN5olNPMO8=",
   "success": true,
   "projectFilePath": "C:\\Desenvolvimento\\SerializationDeserialization\\Services\\Services.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mateu\\.nuget\\packages\\csvhelper\\33.0.1\\csvhelper.33.0.1.nupkg.sha512",
+    "C:\\Users\\mateu\\.nuget\\packages\\soaptools.core.soaprequestbuilder\\1.0.10\\soaptools.core.soaprequestbuilder.1.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

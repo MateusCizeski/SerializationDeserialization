@@ -118,6 +118,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[33.0.1, )"
+            },
+            "SOAPTools.Core.SOAPRequestBuilder": {
+              "target": "Package",
+              "version": "[1.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

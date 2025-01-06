@@ -5,15 +5,13 @@ namespace Services.Services
 {
     public class JsonService
     {
-        public static void SalvarComoJson(List<Veiculo> veiculos, string caminhoArquivo)
+        public static string Serializar(List<Veiculo> veiculos)
         {
-            var json = JsonSerializer.Serialize(veiculos, new JsonSerializerOptions { WriteIndented = true});
-            File.WriteAllText(caminhoArquivo, json);
+            return JsonSerializer.Serialize(veiculos, new JsonSerializerOptions { WriteIndented = true });
         }
 
-        public static List<Veiculo> CarregarDeJson(string caminhoArquivo)
+        public static List<Veiculo> Desserializar(string json)
         {
-            var json = File.ReadAllText(caminhoArquivo);
             return JsonSerializer.Deserialize<List<Veiculo>>(json);
         }
     }

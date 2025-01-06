@@ -5,18 +5,19 @@ namespace Services.Services
 {
     public class XmlService
     {
-        public static void SalvarComoXml(List<Veiculo> veiculos, string caminhoArquivo)
+        public static string Serializar(List<Veiculo> veiculos)
         {
             var serializer = new XmlSerializer(typeof(List<Veiculo>));
-            using var writer = new StreamWriter(caminhoArquivo);
-            serializer.Serialize(writer, veiculos);
+            using var stringWriter = new StringWriter();
+            serializer.Serialize(stringWriter, veiculos);
+            return stringWriter.ToString();
         }
 
-        public static List<Veiculo> CarregarDeXml(string caminhoArquivo)
+        public static List<Veiculo> Desserializar(string xml)
         {
             var serializer = new XmlSerializer(typeof(List<Veiculo>));
-            using var reader = new StreamReader(caminhoArquivo);
-            return (List<Veiculo>)serializer.Deserialize(reader);
+            using var stringReader = new StringReader(xml);
+            return (List<Veiculo>)serializer.Deserialize(stringReader);
         }
     }
 }
